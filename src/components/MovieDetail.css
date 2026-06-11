@@ -1,0 +1,229 @@
+/* ============================================
+   Movie Detail Overlay
+   ============================================ */
+.movie-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  animation: overlayIn 0.3s ease;
+  padding: 24px;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.movie-detail-modal {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow-y: auto;
+  animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(229, 9, 20, 0.08);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.detail-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.detail-close-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(90deg);
+}
+
+/* Layout */
+.detail-layout {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .detail-layout {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+}
+
+/* Poster */
+.detail-poster-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .detail-poster-wrap {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.detail-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-rating-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.rating-star-lg {
+  color: var(--accent-secondary);
+  font-size: 16px;
+}
+
+.rating-value-lg {
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--font-display);
+}
+
+/* Info */
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.detail-title-en {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.detail-dot {
+  color: var(--text-muted);
+}
+
+.detail-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.detail-genre-tag {
+  padding: 4px 14px;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: 100px;
+  background: rgba(229, 9, 20, 0.08);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.detail-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 4px 0;
+}
+
+.detail-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Stats */
+.detail-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.detail-stat-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.detail-stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
