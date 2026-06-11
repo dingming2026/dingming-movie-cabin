@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL;
+
 const MOVIES = [
   {
     id: 1,
@@ -8,7 +10,7 @@ const MOVIES = [
     genre: ['科幻', '冒险', '剧情'],
     director: '克里斯托弗·诺兰',
     description: '一支探险队穿越虫洞，为人类寻找新家园。在浩瀚宇宙中，时间与空间的界限变得模糊，唯有爱与引力能够跨越维度。',
-    image: '/posters/星际穿越.jpg',
+    image: `${BASE}posters/星际穿越.jpg`,
   },
   {
     id: 2,
@@ -19,7 +21,7 @@ const MOVIES = [
     genre: ['科幻', '动作', '悬疑'],
     director: '克里斯托弗·诺兰',
     description: '道姆·柯布是一个专门在梦中窃取秘密的高手。他接受了一项几乎不可能完成的任务——在目标人物的潜意识中植入一个想法。',
-    image: '/posters/盗梦空间.jpg',
+    image: `${BASE}posters/盗梦空间.jpg`,
   },
   {
     id: 3,
@@ -30,7 +32,7 @@ const MOVIES = [
     genre: ['剧情', '犯罪'],
     director: '弗兰克·德拉邦特',
     description: '银行家安迪被冤枉入狱，在肖申克监狱中，他用二十年时间策划了一场惊人的越狱，同时也救赎了狱友瑞德的心灵。',
-    image: '/posters/肖申克的救赎.jpg',
+    image: `${BASE}posters/肖申克的救赎.jpg`,
   },
   {
     id: 4,
@@ -41,7 +43,7 @@ const MOVIES = [
     genre: ['动画', '奇幻', '冒险'],
     director: '宫崎骏',
     description: '少女千寻误入神灵世界，为了拯救变成猪的父母，她在汤屋中工作，经历了一段充满奇幻与成长的冒险旅程。',
-    image: '/posters/千与千寻.jpg',
+    image: `${BASE}posters/千与千寻.jpg`,
   },
   {
     id: 5,
@@ -52,7 +54,7 @@ const MOVIES = [
     genre: ['犯罪', '剧情'],
     director: '弗朗西斯·科波拉',
     description: '维托·柯里昂家族是美国最强大的黑手党家族之一。小儿子迈克尔从不愿意涉足家族生意，到最终成为新一代教父的史诗故事。',
-    image: '/posters/教父.jpg',
+    image: `${BASE}posters/教父.jpg`,
   },
   {
     id: 6,
@@ -63,7 +65,7 @@ const MOVIES = [
     genre: ['科幻', '动作'],
     director: '沃卓斯基姐妹',
     description: '程序员尼奥发现看似正常的现实世界其实是由一个名为"矩阵"的计算机人工智能系统控制的虚拟世界。',
-    image: '/posters/黑客帝国.jpg',
+    image: `${BASE}posters/黑客帝国.jpg`,
   },
   {
     id: 7,
@@ -74,7 +76,7 @@ const MOVIES = [
     genre: ['动画', '爱情', '奇幻'],
     director: '新海诚',
     description: '东京男生立花泷和乡下女生宫水三叶在梦中互换身体，两人开始寻找彼此，却发现在时空交错中隐藏着一个令人心碎的真相。',
-    image: '/posters/你的名字.jpg',
+    image: `${BASE}posters/你的名字.jpg`,
   },
   {
     id: 8,
@@ -85,7 +87,7 @@ const MOVIES = [
     genre: ['剧情', '悬疑'],
     director: '奉俊昊',
     description: '贫穷的金家四口人逐一渗透进富有的朴社长家中工作。两个阶层的碰撞，最终在一场暴雨之夜演变成无法挽回的悲剧。',
-    image: '/posters/寄生虫.jpg',
+    image: `${BASE}posters/寄生虫.jpg`,
   },
   {
     id: 9,
@@ -96,7 +98,7 @@ const MOVIES = [
     genre: ['爱情', '灾难', '剧情'],
     director: '詹姆斯·卡梅隆',
     description: '穷画家杰克和贵族女孩罗丝在泰坦尼克号上相遇相爱，然而巨轮撞上冰山，他们的爱情面临生与死的终极考验。',
-    image: '/posters/泰坦尼克号.jpg',
+    image: `${BASE}posters/泰坦尼克号.jpg`,
   },
   {
     id: 10,
@@ -107,7 +109,7 @@ const MOVIES = [
     genre: ['动作', '犯罪', '剧情'],
     director: '克里斯托弗·诺兰',
     description: '蝙蝠侠面对史上最危险的对手——小丑。这个混乱的代理人将哥谭市推向无政府边缘，迫使蝙蝠侠做出不可能的选择。',
-    image: '/posters/蝙蝠侠：黑暗骑士.jpg',
+    image: `${BASE}posters/蝙蝠侠：黑暗骑士.jpg`,
   },
   {
     id: 11,
@@ -118,7 +120,7 @@ const MOVIES = [
     genre: ['动画', '冒险', '喜剧'],
     director: '拜伦·霍华德',
     description: '兔子朱迪成为动物城的第一位兔子警官，她与狐狸尼克搭档，揭开了一桩涉及动物城命运的惊天阴谋。',
-    image: '/posters/疯狂动物城.jpg',
+    image: `${BASE}posters/疯狂动物城.jpg`,
   },
   {
     id: 12,
@@ -129,7 +131,7 @@ const MOVIES = [
     genre: ['奇幻', '冒险', '家庭'],
     director: '克里斯·哥伦布',
     description: '十一岁的哈利·波特收到霍格沃茨魔法学校的录取通知书，从此踏入了一个充满魔法、友谊与危险的崭新世界。',
-    image: '/posters/哈利波特与魔法石.jpg',
+    image: `${BASE}posters/哈利波特与魔法石.jpg`,
   },
   {
     id: 13,
@@ -140,7 +142,7 @@ const MOVIES = [
     genre: ['剧情', '爱情', '喜剧'],
     director: '罗伯特·泽米吉斯',
     description: '一个智商只有75的简单男人，却经历了美国历史上最重要的时刻。阿甘用奔跑诠释了什么是命运与选择。',
-    image: '/posters/阿甘正传.jpg',
+    image: `${BASE}posters/阿甘正传.jpg`,
   },
   {
     id: 14,
@@ -151,7 +153,7 @@ const MOVIES = [
     genre: ['剧情', '战争', '历史'],
     director: '史蒂文·斯皮尔伯格',
     description: '德国商人奥斯卡·辛德勒在二战期间拯救了1100多名犹太人的生命。一部关于人性、勇气与救赎的不朽史诗。',
-    image: '/posters/辛德勒的名单.jpg',
+    image: `${BASE}posters/辛德勒的名单.jpg`,
   },
   {
     id: 15,
@@ -162,7 +164,7 @@ const MOVIES = [
     genre: ['剧情', '悬疑', '动作'],
     director: '大卫·芬奇',
     description: '一个患有失眠症的白领遇上了肥皂商人泰勒·德顿，两人创立了一个地下搏击俱乐部，事情逐渐失控。',
-    image: '/posters/搏击俱乐部.jpg',
+    image: `${BASE}posters/搏击俱乐部.jpg`,
   },
   {
     id: 16,
@@ -173,7 +175,7 @@ const MOVIES = [
     genre: ['动画', '奇幻', '家庭'],
     director: '宫崎骏',
     description: '两姐妹在乡下遇见了森林中的精灵龙猫，开启了一段充满童真与温暖的奇幻之旅，治愈了无数人的心灵。',
-    image: '/posters/龙猫.jpg',
+    image: `${BASE}posters/龙猫.jpg`,
   },
   {
     id: 17,
@@ -184,7 +186,7 @@ const MOVIES = [
     genre: ['剧情', '科幻', '喜剧'],
     director: '彼得·威尔',
     description: '楚门从出生起就生活在一个巨大的电视摄影棚中而不自知。当他发现真相，他必须决定是否走出这个虚假的世界。',
-    image: '/posters/楚门的世界.jpg',
+    image: `${BASE}posters/楚门的世界.jpg`,
   },
   {
     id: 18,
@@ -195,7 +197,7 @@ const MOVIES = [
     genre: ['动画', '冒险', '家庭'],
     director: '彼特·道格特',
     description: '78岁的老卡尔用成千上万个气球让房子飞了起来，与小男孩罗素一起前往南美洲冒险，完成亡妻的遗愿。',
-    image: '/posters/飞屋环游记.jpg',
+    image: `${BASE}posters/飞屋环游记.jpg`,
   },
   {
     id: 19,
@@ -206,7 +208,7 @@ const MOVIES = [
     genre: ['犯罪', '悬疑', '剧情'],
     director: '刘伟强 / 麦兆辉',
     description: '警方卧底陈永仁与黑帮卧底刘建明，两人在身份的双重迷局中展开一场惊心动魄的对决。香港警匪片的巅峰之作。',
-    image: '/posters/无间道.jpg',
+    image: `${BASE}posters/无间道.jpg`,
   },
   {
     id: 20,
@@ -217,7 +219,7 @@ const MOVIES = [
     genre: ['奇幻', '冒险', '动作'],
     director: '彼得·杰克逊',
     description: '中土世界的最终决战。佛罗多和山姆深入魔多，阿拉贡集结人类最后的军队，为自由而战的史诗终章。',
-    image: '/posters/指环王：王者无敌.jpg',
+    image: `${BASE}posters/指环王：王者无敌.jpg`,
   },
   {
     id: 21,
@@ -228,7 +230,7 @@ const MOVIES = [
     genre: ['剧情', '战争', '爱情'],
     director: '罗伯托·贝尼尼',
     description: '犹太人圭多为了保护儿子的心灵，在纳粹集中营中用想象力编织了一个美丽的游戏，用父爱照亮最黑暗的时刻。',
-    image: '/posters/美丽人生.jpg',
+    image: `${BASE}posters/美丽人生.jpg`,
   },
   {
     id: 22,
@@ -239,7 +241,7 @@ const MOVIES = [
     genre: ['剧情', '爱情', '历史'],
     director: '陈凯歌',
     description: '两个京剧伶人半个世纪的悲欢离合，折射出中国社会的沧桑巨变。不疯魔不成活，一曲霸王别姬唱尽人生无奈。',
-    image: '/posters/霸王别姬.jpg',
+    image: `${BASE}posters/霸王别姬.jpg`,
   },
   {
     id: 23,
@@ -250,7 +252,7 @@ const MOVIES = [
     genre: ['动画', '科幻', '冒险'],
     director: '安德鲁·斯坦顿',
     description: '地球被垃圾覆盖，孤独的机器人瓦力日复一日地清理废弃物。直到一天，一个名叫伊芙的探测机器人改变了一切。',
-    image: '/posters/瓦力.jpg',
+    image: `${BASE}posters/瓦力.jpg`,
   },
   {
     id: 24,
@@ -261,7 +263,7 @@ const MOVIES = [
     genre: ['剧情', '青春'],
     director: '彼得·威尔',
     description: '基廷老师用诗歌唤醒了学生们对自由与梦想的渴望。"Carpe Diem，及时行乐"，这句箴言改变了他们的一生。',
-    image: '/posters/死亡诗社.jpg',
+    image: `${BASE}posters/死亡诗社.jpg`,
   },
   {
     id: 25,
@@ -272,7 +274,7 @@ const MOVIES = [
     genre: ['动画', '奇幻', '冒险'],
     director: '宫崎骏',
     description: '少女希达从天而降，少年巴鲁接住了她。两人一起追寻传说中的天空之城拉普达，展开了一场浪漫的空中冒险。',
-    image: '/posters/天空之城.jpg',
+    image: `${BASE}posters/天空之城.jpg`,
   },
   {
     id: 26,
@@ -283,7 +285,7 @@ const MOVIES = [
     genre: ['喜剧', '奇幻', '爱情'],
     director: '刘镇伟',
     description: '至尊宝穿越时空寻找真爱，却发现自己的宿命是成为孙悟空。戴上紧箍咒就不能爱你，不戴就无法保护你。',
-    image: '/posters/大话西游.jpg',
+    image: `${BASE}posters/大话西游.jpg`,
   },
   {
     id: 27,
@@ -294,7 +296,7 @@ const MOVIES = [
     genre: ['爱情', '剧情'],
     director: '岩井俊二',
     description: '一封寄往天国的情书，揭开了一段尘封多年的青涩暗恋。雪中的小樽，两个同名同姓的少年，一段错过的美好。',
-    image: '/posters/情书.jpg',
+    image: `${BASE}posters/情书.jpg`,
   },
   {
     id: 28,
@@ -305,7 +307,7 @@ const MOVIES = [
     genre: ['动作', '喜剧', '剧情'],
     director: '姜文',
     description: '北洋年间，悍匪张麻子劫了县长马邦德的火车，冒充县长上任鹅城，与地方恶霸黄四郎展开了一场斗智斗勇的较量。',
-    image: '/posters/让子弹飞.jpg',
+    image: `${BASE}posters/让子弹飞.jpg`,
   },
   {
     id: 29,
@@ -316,7 +318,7 @@ const MOVIES = [
     genre: ['动画', '冒险', '家庭'],
     director: '罗杰·阿勒斯',
     description: '小狮子辛巴在失去父亲后逃离家园，在朋友丁满和彭彭的陪伴下成长，最终回到荣耀王国夺回属于自己的王位。',
-    image: '/posters/狮子王.jpg',
+    image: `${BASE}posters/狮子王.jpg`,
   },
   {
     id: 30,
@@ -327,7 +329,7 @@ const MOVIES = [
     genre: ['动画', '奇幻', '悬疑'],
     director: '亨利·塞利克',
     description: '女孩卡洛琳发现了一扇通向平行世界的秘密门，那里的一切看似完美，却隐藏着令人毛骨悚然的黑暗真相。',
-    image: '/posters/鬼妈妈.jpg',
+    image: `${BASE}posters/鬼妈妈.jpg`,
   },
 ];
 
